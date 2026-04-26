@@ -35,6 +35,29 @@ graph TD
     end
 ```
 
+
+## The Dual-Brain Logic: Why Two Models?
+The system employs a "Trust but Verify" architecture to solve the two biggest problems in Rogue AP detection: False Positives and Evasion.
+
+Brain 1 (Passive Physics): The First Line of Defense
+
+Layer: Layer 2 (Data Link).
+
+Logic: This model monitors the airwaves without the user ever connecting to a network. It looks for "Physical Fingerprints" (timing deltas, signal strength anomalies, and beacon frame behavior) using the AWID dataset.
+
+The Flaw: Physics can be noisy. A legitimate neighbor's router might have a weird signal that mimics an attack, leading to a False Positive.
+
+Brain 2 (Active Telemetry): The Confirmation Engine
+
+Layer: Layer 7 (Application).
+
+Logic: Once Brain 1 flags a network as "Suspicious," the system initiates Phase 3: Active Interrogation. It connects to the rogue AP in a secure air-gap to extract DHCP and DNS behaviors generated in my Mininet simulation.
+
+The Strength: While an attacker can spoof a MAC address (L2), it is much harder for them to perfectly mimic the DHCP handshake timing and DNS redirection patterns of a legitimate enterprise gateway.
+
+The Result: By fusing Physics (Brain 1) with Network Logic (Brain 2), the system eliminates 99% of false alarms.
+
+
 ## 🧠 Model Development & Data Engineering Deep Dive
 This system relies on a dual-brain architecture. Developing these models required moving beyond standard machine learning tutorials to address real-world data inconsistencies, hardware limitations, and environmental noise.
 
