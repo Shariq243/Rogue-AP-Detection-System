@@ -28,9 +28,9 @@ def nuke_string(s):
         return str(s).strip().lower()
     return cleaned
 
-# -------------------------------------------------------------------
+
 # Configuration
-# -------------------------------------------------------------------
+
 # Resolve the base directory for data files (works for both script and executable)
 if getattr(sys, 'frozen', False):
     _BASE_DIR = Path(sys._MEIPASS)  # PyInstaller temp extraction folder
@@ -109,9 +109,9 @@ class RogueAPScanner(tb.Window):
         except Exception as e:
             messagebox.showwarning("Model Warning", f"Brain 2 (DHCP/DNS) not loaded: {e}\nPhase 3 will still work but with reduced accuracy.")
 
-    # ===================================================================
+   
     # PAGE 1: THE LANDING PAGE
-    # ===================================================================
+    
     def build_landing_page(self):
         frame = tb.Frame(self.container, padding=40)
         self.frames["LandingPage"] = frame
@@ -272,9 +272,9 @@ class RogueAPScanner(tb.Window):
         finally:
             self.after(0, lambda: self.btn_connect.config(state=NORMAL))
 
-    # ===================================================================
+    
     # PAGE 2: THE DASHBOARD (Responsive)
-    # ===================================================================
+    
     def build_dashboard_page(self):
         frame = tb.Frame(self.container, padding=10)
         self.frames["DashboardPage"] = frame
@@ -466,9 +466,9 @@ class RogueAPScanner(tb.Window):
             
         feat_tree.pack(fill=BOTH, expand=True, padx=20, pady=(0, 20))
 
-    # ===================================================================
+  
     # CORE LOGIC: SCAN & PROCESS
-    # ===================================================================
+    
     
     def start_scan(self):
         iface = self.ent_monitor.get().strip()

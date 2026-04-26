@@ -16,7 +16,7 @@ graph TD
         D --> E[Isolate Monitor Interface]
         E --> F[Sniff Beacon Frames via TShark]
         F --> G[Extract Radio Physics Features]
-        G --> H[ML Brain 1: Random Forest Scoring]
+        G --> H[ML Brain 1: Logistic Regression Scoring]
         H --> I[Analyze Results vs. Golden Profile]
         I --> J{Verdict?}
         J -->|Trusted| K[Your Network]
@@ -28,7 +28,7 @@ graph TD
         M --> N[Initiate Air-Gap Isolation]
         N --> O[Connect to Suspicious Rogue AP]
         O --> P[Extract DHCP/DNS Telemetry]
-        P --> Q[ML Brain 2: Network Logic Scoring]
+        P --> Q[ML Brain 2: Network Logic Scoring( dhcp_offer_count & dns_query_total)]
         Q --> R[IP/DNS Heuristic Checks]
         R --> S[Merge Scores: Physics + Network + Name]
         S --> T[Final Response: Confirmed Threat / Safe]
@@ -44,7 +44,7 @@ graph TD
 ### Phase 2: Passive Surveillance (Brain 1 - Radio Physics)
 - **Monitor Mode:** The app disconnects the interface from NetworkManager and activates monitor mode (performing hardware power-cycles where supported).
 - **Packet Sniffing:** Uses `tshark` while channel hopping to capture beacon frames.
-- **AI Analysis:** A Random Forest model analyzes 15 high-fidelity features (including timing deltas and signal strengths).
+- **AI Analysis:** A Logistic Regression model analyzes 15 high-fidelity features (including timing deltas and signal strengths).
 - **Detection Types:**
     - **Confirmed Evil Twin:** Matches Golden SSID but exhibits malicious behavioral patterns.
     - **Advanced Evil Twin (MAC Spoof):** Matches both SSID and BSSID, but detected via physical signal anomalies.

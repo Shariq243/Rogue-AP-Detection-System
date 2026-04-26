@@ -14,9 +14,15 @@ from sklearn.metrics import accuracy_score, recall_score, f1_score, precision_sc
 # DEFINE PATHS AND LOAD DATA
 # =============================================================================
 
-workspace_path = r"c:\Users\hamza\OneDrive\Desktop\Machine Learning Part\99_Main_Work"
-evil_twin_trn_path = os.path.join(workspace_path, "1_datasets", "processed", "Evil_Twin-Dataset.csv")
-evil_twin_tst_path = os.path.join(workspace_path, "1_datasets", "processed", "Evil_Twin-Dataset-Tst-Preprocessed.csv")
+from pathlib import Path
+
+# Resolve base directory relative to this script
+BASE_DIR = Path(__file__).resolve().parent.parent.parent.parent
+
+workspace_path = BASE_DIR / "data"
+evil_twin_trn_path = os.path.join(workspace_path, "Evil_Twin-Dataset.csv")
+evil_twin_tst_path = os.path.join(workspace_path, "Evil_Twin-Dataset-Tst-Preprocessed.csv")
+
 
 print("\n" + "=" * 80)
 print("3.2 TRAINING AND EVALUATION WITH BEST HYPERPARAMETERS")

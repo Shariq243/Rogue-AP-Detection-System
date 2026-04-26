@@ -11,8 +11,14 @@ import pandas as pd
 # DEFINE PATHS
 # =============================================================================
 
-workspace_path = r"c:\Users\hamza\OneDrive\Desktop\Machine Learning Part\99_Main_Work"
-evil_twin_tst_path = os.path.join(workspace_path, "1_datasets", "processed", "Evil_Twin-Dataset-Tst.csv")
+from pathlib import Path
+
+# Resolve base directory relative to this script
+BASE_DIR = Path(__file__).resolve().parent.parent.parent.parent
+
+workspace_path = BASE_DIR / "data"
+evil_twin_tst_path = os.path.join(workspace_path, "Evil_Twin-Dataset-Tst.csv")
+
 
 print("=" * 80)
 print("TEST DATASET PREPROCESSING - tst.py")

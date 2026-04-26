@@ -15,8 +15,14 @@ print("=" * 60)
 print("LOADING & PREPARING DATA")
 print("=" * 60)
 
-train_path = r"C:\Users\hamza\OneDrive\Desktop\Machine Learning Part\99_Main_Work\2_Stuff\domain shift\Evil_Twin-Dataset-Domain-Invariant.csv"
-test_path = r"C:\Users\hamza\OneDrive\Desktop\Machine Learning Part\99_Main_Work\2_Stuff\domain shift\Evil_Twin-Dataset-Tst-Domain-Invariant.csv"
+from pathlib import Path
+
+# Resolve base directory relative to this script
+BASE_DIR = Path(__file__).resolve().parent.parent.parent.parent.parent
+
+train_path = BASE_DIR / "data" / "Evil_Twin-Dataset-Domain-Invariant.csv"
+test_path = BASE_DIR / "data" / "Evil_Twin-Dataset-Tst-Domain-Invariant.csv"
+
 
 print("Loading Data...")
 df_train = pd.read_csv(train_path)

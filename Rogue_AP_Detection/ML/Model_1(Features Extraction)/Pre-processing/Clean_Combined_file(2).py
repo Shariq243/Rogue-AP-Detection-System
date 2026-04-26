@@ -17,9 +17,15 @@ from sklearn.naive_bayes import GaussianNB
 # DEFINE PATHS
 # =============================================================================
 
+from pathlib import Path
+
+# Resolve base directory relative to this script
+BASE_DIR = Path(__file__).resolve().parent.parent.parent.parent
+
 # Define base paths
-workspace_path = r"c:\Users\hamza\OneDrive\Desktop\Machine Learning Part\99_Main_Work"
-evil_twin_path = os.path.join(workspace_path, "1_datasets", "processed", "Evil_Twin-Dataset.csv")
+workspace_path = BASE_DIR / "data"
+evil_twin_path = os.path.join(workspace_path, "Evil_Twin-Dataset.csv")
+
 
 # =============================================================================
 # 1.3 Evil Twin Dataset (Loading)

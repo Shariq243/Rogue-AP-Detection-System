@@ -13,8 +13,14 @@ print("=" * 60)
 print("PHASE 1: LOADING DATA")
 print("=" * 60)
 
-evil_twin_trn_path = r"C:\Users\hamza\OneDrive\Desktop\Machine Learning Part\99_Main_Work\1_datasets\processed\Evil_Twin-Dataset.csv"
-evil_twin_tst_path = r"C:\Users\hamza\OneDrive\Desktop\Machine Learning Part\99_Main_Work\1_datasets\processed\Evil_Twin-Dataset-Tst-Preprocessed.csv"
+from pathlib import Path
+
+# Resolve base directory relative to this script
+BASE_DIR = Path(__file__).resolve().parent.parent.parent.parent.parent
+
+evil_twin_trn_path = BASE_DIR / "data" / "Evil_Twin-Dataset.csv"
+evil_twin_tst_path = BASE_DIR / "data" / "Evil_Twin-Dataset-Tst-Preprocessed.csv"
+
 
 df_train = pd.read_csv(evil_twin_trn_path)
 df_test = pd.read_csv(evil_twin_tst_path)

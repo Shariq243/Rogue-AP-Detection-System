@@ -8,9 +8,15 @@ and save cleaned versions for domain shift analysis.
 import pandas as pd
 import os
 
-# Define paths
-datasets_folder = r"C:\Users\hamza\OneDrive\Desktop\Machine Learning Part\99_Main_Work\1_datasets\processed"
-output_folder = r"C:\Users\hamza\OneDrive\Desktop\Machine Learning Part\99_Main_Work\2_Stuff\domain shift"
+from pathlib import Path
+
+# Resolve base directory relative to this script
+BASE_DIR = Path(__file__).resolve().parent.parent.parent.parent.parent
+
+# Define paths relative to project root
+datasets_folder = BASE_DIR / "data"
+output_folder = BASE_DIR / "data"
+
 
 # Input files
 trn_path = os.path.join(datasets_folder, "Evil_Twin-Dataset.csv")

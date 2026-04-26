@@ -10,8 +10,14 @@ from mininet.node import OVSController
 from mn_wifi.net import Mininet_wifi
 from mn_wifi.link import wmediumd
 
+from pathlib import Path
+
+# Resolve base directory relative to this script
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
+
 REAL_OUIS = ["00:14:22", "C0:C9:E3", "A0:04:60", "08:86:3B", "F8:32:E4", "00:25:00"]
-OUTPUT_CSV = "/home/wifi/Desktop/Final_10k_Dataset.csv"
+OUTPUT_CSV = str(BASE_DIR / "data" / "Final_10k_Dataset.csv")
+
 
 # PRE-CONFIGURED FOR 1000 BATCHES
 TOTAL_BATCHES = 1000  
