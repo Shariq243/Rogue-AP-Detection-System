@@ -1,0 +1,112 @@
+{
+  "frame.time_delta": {
+    "ks_statistic": 0.10570595285192574,
+    "p_value": 0.0,
+    "is_drifting": false
+  },
+  "frame.time_delta_displayed": {
+    "ks_statistic": 0.10570595285192574,
+    "p_value": 0.0,
+    "is_drifting": false
+  },
+  "frame.time_relative": {
+    "ks_statistic": 0.01590712555543472,
+    "p_value": 5.371051638376386e-129,
+    "is_drifting": false
+  },
+  "frame.len": {
+    "ks_statistic": 0.2625737766250629,
+    "p_value": 0.0,
+    "is_drifting": true
+  },
+  "frame.cap_len": {
+    "ks_statistic": 0.2625737766250629,
+    "p_value": 0.0,
+    "is_drifting": true
+  },
+  "radiotap.present.rate": {
+    "ks_statistic": 0.08206862248045547,
+    "p_value": 0.0,
+    "is_drifting": false
+  },
+  "radiotap.present.dbm_antsignal": {
+    "ks_statistic": 0.07216411367587042,
+    "p_value": 0.0,
+    "is_drifting": false
+  },
+  "radiotap.present.antenna": {
+    "ks_statistic": 0.0721641136758705,
+    "p_value": 0.0,
+    "is_drifting": false
+  },
+  "radiotap.present.rtap_ns": {
+    "ks_statistic": 0.07216411367587042,
+    "p_value": 0.0,
+    "is_drifting": false
+  },
+  "radiotap.present.ext": {
+    "ks_statistic": 0.07216411367587042,
+    "p_value": 0.0,
+    "is_drifting": false
+  },
+  "radiotap.datarate": {
+    "ks_statistic": 0.055013446564194046,
+    "p_value": 0.0,
+    "is_drifting": false
+  },
+  "radiotap.dbm_antsignal": {
+    "ks_statistic": 0.17562644945268727,
+    "p_value": 0.0,
+    "is_drifting": true
+  },
+  "wlan.fc.type_subtype": {
+    "ks_statistic": 0.14533654862039777,
+    "p_value": 0.0,
+    "is_drifting": false
+  },
+  "wlan.fc.type": {
+    "ks_statistic": 0.05285324132073832,
+    "p_value": 0.0,
+    "is_drifting": false
+  },
+  "wlan.fc.subtype": {
+    "ks_statistic": 0.09247820264408624,
+    "p_value": 0.0,
+    "is_drifting": false
+  },
+  "wlan.fc.ds": {
+    "ks_statistic": 0.11822697138131777,
+    "p_value": 0.0,
+    "is_drifting": false
+  },
+  "wlan.duration": {
+    "ks_statistic": 0.620236743686991,
+    "p_value": 0.0,
+    "is_drifting": true
+  },
+  "wlan.frag": {
+    "ks_statistic": 0.2239451289985832,
+    "p_value": 0.0,
+    "is_drifting": true
+  },
+  "wlan.seq": {
+    "ks_statistic": 0.23058523878500775,
+    "p_value": 0.0,
+    "is_drifting": true
+  },
+  "wlan.qos.tid": {
+    "ks_statistic": 6.433101336744684e-05,
+    "p_value": 1.0,
+    "is_drifting": false
+  },
+  "wlan.qos.priority": {
+    "ks_statistic": 6.433101336744684e-05,
+    "p_value": 1.0,
+    "is_drifting": false
+  },
+  "data.len": {
+    "ks_statistic": 0.3517014128356182,
+    "p_value": 0.0,
+    "is_drifting": true
+  }
+}
