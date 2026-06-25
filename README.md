@@ -74,6 +74,21 @@ The Domain Shift Breakthrough: I pivoted from basic scaling to Domain Shift Anal
 
 Final Champion: Re-evaluating 10+ algorithms on the refined 15-feature dataset revealed that Logistic Regression and Random Forest provided the highest resilience against environmental domain shift, forming the core of Brain 1.
 
+| Model | Accuracy | F1-Score | Precision | Recall | Train Time | Inference Time |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **Logistic Regression ★** | **96.34%** | **96.28%** | **95.63%** | **96.93%** | **6.79s** | **0.059s** |
+| LinearSVC | 96.31% | 96.24% | 95.61% | 96.89% | 20.96s | 0.106s |
+| KNNi(100k) | 96.14% | 95.99% | 97.23% | 94.78% | 0.44s | 163.12s |
+| XGBoosti(GPU) | 96.06% | 95.89% | 97.59% | 94.26% | 2.82s | 0.435s |
+| LightGBM | 96.05% | 95.89% | 97.43% | 94.40% | 14.89s | 1.986s |
+| LSTM | 95.81% | 95.62% | 97.43% | 93.88% | 300.96s | 1.389s |
+| Random Forest | 95.59% | 95.40% | 97.11% | 93.74% | 334.31s | 9.555s |
+| Decision Tree | 95.04% | 94.81% | 96.81% | 92.89% | 13.67s | 0.137s |
+| Gaussian NB | 94.14% | 94.25% | 90.32% | 98.54% | 0.40s | 0.203s |
+| Transformer | 92.93% | 92.42% | 96.90% | 88.34% | 40.07s | 1.754s |
+| 1D-CNN | 92.74% | 92.18% | 97.15% | 87.69% | 83.91s | 1.797s |
+
+
 ### 2. Brain 2: Network Telemetry (Mininet Synthesis)
 Because the AWID dataset focuses almost entirely on Layer 2 (Data Link / Physics), I required a separate dataset for Layer 7 (Application) interrogation. Since no comprehensive DHCP/DNS Evil Twin dataset existed, I engineered my own.
 
@@ -107,3 +122,11 @@ The Security Air-Gap: Before initiating Phase 3 (Active Interrogation), the appl
 - `tshark` (Wireshark) installed.
 - `nmcli` and `iw` for interface management.
 - Python dependencies: `pandas`, `joblib`, `ttkbootstrap`, `numpy`.
+
+## ⚙️ How to Run
+1. Clone the repository: `git clone https://github.com/Shariq243/Rogue-AP-Detection-System.git`
+2. Install dependencies: `pip install pandas joblib ttkbootstrap numpy`
+3. Execute the GUI with root privileges: `sudo python3 Application/rogue_ap_gui_awid.py`
+
+
+
