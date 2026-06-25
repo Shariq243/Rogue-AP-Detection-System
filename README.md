@@ -72,7 +72,7 @@ Failed Standard Mitigations: Standard Data Engineering approaches—including No
 
 The Domain Shift Breakthrough: I pivoted from basic scaling to Domain Shift Analysis between the training and testing sets. I discovered that 7 specific features exhibited massive distributional variance depending on the physical adapter and environment. By surgically removing these highly variable features, I reduced the dimensionality to 15 robust features.
 
-Final Champion: Re-evaluating 10+ algorithms on the refined 15-feature dataset revealed that Logistic Regression and Random Forest provided the highest resilience against environmental domain shift, forming the core of Brain 1.
+Final Champion: Re-evaluating 10+ algorithms on the refined 15-feature dataset revealed that Logistic Regression provided the highest resilience against environmental domain shift. It achieved a final Accuracy of 96.34% and an F1-Score of 96.28%, while maintaining a lightning-fast 0.059s Inference Time—a critical hardware requirement for real-time packet analysis during active hunting.
 
 | Model | Accuracy | F1-Score | Precision | Recall | Train Time | Inference Time |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
